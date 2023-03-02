@@ -1,0 +1,67 @@
+<h1 align=center>Список населения средневекового города</h1>
+<h2>Статусы горожан</h2>
+<table width=20%>
+<tr>
+<td width=50%><b>Статус</b></td>
+</tr>
+{% for i in statuss%}
+<tr class='success'>
+<td width=50%>{{ i.status }}</td>
+</tr>
+{% endfor %}
+</table>
+<br>
+<h2>Cписок феодалов</h2>
+<table width=40%>
+<tr>
+<td width=33%><b>Имя</b></td>
+<td width=33%><b>Возраст</b></td>
+<td width=33%><b>Доход</b></td>
+</tr>
+{% for i in feodalss%}
+<tr >
+<td>{{ i.name }}</td>
+<td>{{ i.age }}</td>
+<td>{{ i.income }}</td>
+</tr>
+{% endfor %}
+</table>
+
+
+
+<h2>Cписок рыцарей</h2>
+<table width=50%>
+<tr>
+<td width=25%><b>Имя</b></td>
+<td width=25%><b>Возраст</b></td>
+<td width=25%><b>Феодал - хозяин</b></td>
+<td width=25%><b>Доход</b></td>
+</tr>
+{% for i in seniorss%}
+<tr >
+<td>{{ i.name }}</td>
+<td>{{ i.age }}</td>
+<td>{{ i.feodal_id_id }}</td>
+<td>{{ i.income }}</td>
+</tr>
+{% endfor %}
+</table>
+
+
+<h2>Cписок крестьян</h2>
+<table width=50%>
+<tr>
+<td width=25%><b>Имя</b></td>
+<td width=25%><b>Возраст</b></td>
+<td width=25%><b>Рыцарь - хозяин</b></td>
+<td width=25%><b>Доход</b></td>
+</tr>
+{% for i in citizenss%}
+<tr >
+<td>{{ i.name }}</td>
+<td>{{ i.age }}</td>
+<td>{{ i.senior_id_id }}</td>
+<td>{{ i.income }}</td>
+</tr>
+{% endfor %}
+</table>
